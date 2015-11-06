@@ -14,6 +14,7 @@
 		8D04586F1BCF3F9F007686B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D04586D1BCF3F9F007686B8 /* LaunchScreen.storyboard */; };
 		8D04587A1BCF3F9F007686B8 /* SQLite_PersistenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0458791BCF3F9F007686B8 /* SQLite_PersistenceTests.swift */; };
 		8D0458851BCF3F9F007686B8 /* SQLite_PersistenceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0458841BCF3F9F007686B8 /* SQLite_PersistenceUITests.swift */; };
+		8D0458931BD032FC007686B8 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D0458921BD032FC007686B8 /* libsqlite3.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,8 @@
 		8D0458801BCF3F9F007686B8 /* SQLite PersistenceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SQLite PersistenceUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D0458841BCF3F9F007686B8 /* SQLite_PersistenceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLite_PersistenceUITests.swift; sourceTree = "<group>"; };
 		8D0458861BCF3F9F007686B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D0458921BD032FC007686B8 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		8D0458941BD033C3007686B8 /* SQLite Persistence-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SQLite Persistence-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D0458931BD032FC007686B8 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,10 +81,12 @@
 		8D0458581BCF3F9F007686B8 = {
 			isa = PBXGroup;
 			children = (
+				8D0458921BD032FC007686B8 /* libsqlite3.tbd */,
 				8D0458631BCF3F9F007686B8 /* SQLite Persistence */,
 				8D0458781BCF3F9F007686B8 /* SQLite PersistenceTests */,
 				8D0458831BCF3F9F007686B8 /* SQLite PersistenceUITests */,
 				8D0458621BCF3F9F007686B8 /* Products */,
+				8D0458941BD033C3007686B8 /* SQLite Persistence-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -187,6 +193,7 @@
 		8D0458591BCF3F9F007686B8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "LAURA LUCRECIA SANCHEZ PADILLA";
 				TargetAttributes = {
@@ -398,10 +405,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "SQLite Persistence/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "mx.itesm.ccm.SQLite-Persistence";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SQLite Persistence-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -409,10 +419,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "SQLite Persistence/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "mx.itesm.ccm.SQLite-Persistence";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SQLite Persistence-Bridging-Header.h";
 			};
 			name = Release;
 		};
